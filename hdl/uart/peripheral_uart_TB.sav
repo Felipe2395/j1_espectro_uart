@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.58 (w)1999-2014 BSI
+[*] Sat Nov 28 15:23:18 2015
+[*]
+[dumpfile] "/home/peque/Escritorio/red/hdl/uart/simulation/peripheral_uart_TB.vcd"
+[dumpfile_mtime] "Sat Nov 28 15:18:56 2015"
+[dumpfile_size] 56055
+[savefile] "/home/peque/Escritorio/red/hdl/uart/peripheral_uart_TB.sav"
+[timestart] 0
+[size] 1280 1000
+[pos] 799 -26
+*-22.113440 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] peripheral_uart_TB.
+[treeopen] peripheral_uart_TB.uut.
+[sst_width] 201
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+peripheral_uart_TB.uut.uart0.tx_busy
+@22
+peripheral_uart_TB.uut.uart0.tx_count16[3:0]
+peripheral_uart_TB.uut.d_in[15:0]
+@28
+peripheral_uart_TB.uut.cs
+@29
+peripheral_uart_TB.uut.uart_tx
+[pattern_trace] 1
+[pattern_trace] 0

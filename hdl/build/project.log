@@ -1,0 +1,1227 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project.src"
+Input Format                       : mixed
+
+---- Target Parameters
+Target Device                      : xc7a100t-1csg324
+Output File Name                   : "project.ngc"
+Output Format                      : NGC
+
+---- Source Options
+Top Module Name                    : j1soc
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+RTL Output                         : yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1soc.v" into library work
+Parsing module <j1soc>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" into library work
+Parsing module <j1>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpram.v" into library work
+Parsing module <dp_ram>.
+INFO:HDLCompiler:693 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpram.v" Line 24. parameter declaration becomes local in dp_ram with formal parameter declaration list
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" into library work
+Parsing module <uart>.
+INFO:HDLCompiler:693 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 24. parameter declaration becomes local in uart with formal parameter declaration list
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/peripheral_uart.v" into library work
+Parsing module <peripheral_uart>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/peripheral_mult.v" into library work
+Parsing module <peripheral_mult>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/acc.v" into library work
+Parsing module <acc>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/comp.v" into library work
+Parsing module <comp>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/control_mult.v" into library work
+Parsing module <control_mult>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/lsr.v" into library work
+Parsing module <lsr>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/rsr.v" into library work
+Parsing module <rsr>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/mult_32.v" into library work
+Parsing module <mult_32>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/peripheral_div.v" into library work
+Parsing module <peripheral_div>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/control_div.v" into library work
+Parsing module <control_div>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/counter_div.v" into library work
+Parsing module <counter_div>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/div_16.v" into library work
+Parsing module <div_16>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/final_result.v" into library work
+Parsing module <final_result>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/lsr_div.v" into library work
+Parsing module <lsr_div>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/subtractor.v" into library work
+Parsing module <subtractor>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/core_peripheric.v" into library work
+Parsing module <core_peripheric>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/dualport_RAM.v" into library work
+Parsing module <dualport_RAM>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/dpRAM_interface.v" into library work
+Parsing module <dpRAM_interface>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/peripheral_espectro.v" into library work
+Parsing module <peripheral_espectro>.
+Analyzing Verilog file "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/espectro.v" into library work
+Parsing module <espectro>.
+WARNING:HDLCompiler:751 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/espectro.v" Line 8: Redeclaration of ansi port sound is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <j1soc>.
+
+Elaborating module <j1(bootram_file="../firmware/Hello_World/j1.mem")>.
+
+Elaborating module <dp_ram(adr_width=13,dat_width=16,mem_file_name="../firmware/Hello_World/j1.mem")>.
+Reading initialization file \"home/chris/Documentos/2015/j1_espectro_uart/hdl/../firmware/Hello_World/j1.mem\".
+WARNING:HDLCompiler:189 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 46: Size mismatch in connection of port <en_b>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 47: Size mismatch in connection of port <adr_a>. Formal port size is 13-bit while actual signal size is 15-bit.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 90: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 117: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 129: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 134: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 155: Result of 15-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v" Line 157: Result of 16-bit expression is truncated to fit in 13-bit target.
+
+Elaborating module <peripheral_mult>.
+
+Elaborating module <mult_32>.
+
+Elaborating module <rsr>.
+
+Elaborating module <lsr>.
+WARNING:HDLCompiler:189 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/mult_32.v" Line 21: Size mismatch in connection of port <s_A>. Formal port size is 31-bit while actual signal size is 32-bit.
+
+Elaborating module <comp>.
+
+Elaborating module <acc>.
+
+Elaborating module <control_mult>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/control_mult.v" Line 63: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <peripheral_div>.
+
+Elaborating module <div_16>.
+
+Elaborating module <lsr_div>.
+WARNING:HDLCompiler:189 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/div_16.v" Line 21: Size mismatch in connection of port <rst>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <subtractor>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/subtractor.v" Line 19: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <counter_div>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/counter_div.v" Line 18: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/counter_div.v" Line 22: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <control_div>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/control_div.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:91 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/control_div.v" Line 90: Signal <DV0> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <final_result>.
+
+Elaborating module <peripheral_uart>.
+
+Elaborating module <uart(freq_hz=100000000,baud=115200)>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 39: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 88: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 137: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v" Line 140: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <dpRAM_interface>.
+
+Elaborating module <dualport_RAM>.
+
+Elaborating module <core_peripheric>.
+
+Elaborating module <peripheral_espectro>.
+
+Elaborating module <espectro>.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/espectro.v" Line 34: Result of 32-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/espectro.v" Line 69: Result of 21-bit expression is truncated to fit in 20-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <j1soc>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1soc.v".
+        bootram_file = "../firmware/Hello_World/j1.mem"
+    Summary:
+	no macro.
+Unit <j1soc> synthesized.
+
+Synthesizing Unit <j1>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/j1.v".
+        bootram_file = "../firmware/Hello_World/j1.mem"
+    Found 32x16-bit dual-port RAM <Mram_dstack> for signal <dstack>.
+    Found 32x16-bit dual-port RAM <Mram_rstack> for signal <rstack>.
+    Found 5-bit register for signal <dsp>.
+    Found 16-bit register for signal <st0>.
+    Found 5-bit register for signal <rsp>.
+    Found 13-bit register for signal <pc>.
+    Found 14-bit adder for signal <n0144[13:0]> created at line 41.
+    Found 16-bit adder for signal <st0[15]_st1[15]_add_11_OUT> created at line 82.
+    Found 5-bit adder for signal <dsp[4]_GND_2_o_add_33_OUT> created at line 117.
+    Found 5-bit adder for signal <dsp[4]_dd[1]_add_34_OUT> created at line 122.
+    Found 5-bit adder for signal <rsp[4]_rd[1]_add_35_OUT> created at line 123.
+    Found 5-bit adder for signal <rsp[4]_GND_2_o_add_40_OUT> created at line 134.
+    Found 16-bit subtractor for signal <GND_2_o_GND_2_o_sub_20_OUT<15:0>> created at line 90.
+    Found 5-bit subtractor for signal <GND_2_o_GND_2_o_sub_38_OUT<4:0>> created at line 129.
+    Found 16-bit shifter logical right for signal <st1[15]_st0[3]_shift_right_18_OUT> created at line 89
+    Found 16-bit shifter logical left for signal <st1[15]_st0[3]_shift_left_22_OUT> created at line 93
+    Found 16-bit 16-to-1 multiplexer for signal <st0sel[3]_st1[15]_wide_mux_24_OUT> created at line 79.
+    Found 5-bit 4-to-1 multiplexer for signal <_n0188> created at line 126.
+    Found 5-bit 3-to-1 multiplexer for signal <_n0190> created at line 126.
+    Found 16-bit 3-to-1 multiplexer for signal <_n0192> created at line 126.
+    Found 16-bit comparator equal for signal <st1[15]_st0[15]_equal_17_o> created at line 87
+    Found 16-bit comparator greater for signal <st0[15]_st1[15]_LessThan_18_o> created at line 88
+    Found 16-bit comparator greater for signal <st1[15]_st0[15]_LessThan_24_o> created at line 95
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  39 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  41 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <j1> synthesized.
+
+Synthesizing Unit <dp_ram>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpram.v".
+        adr_width = 13
+        dat_width = 16
+        mem_file_name = "../firmware/Hello_World/j1.mem"
+    Found 8192x16-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <dat_a_out>.
+    Found 16-bit register for signal <dat_b>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <dp_ram> synthesized.
+
+Synthesizing Unit <peripheral_mult>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/peripheral_mult.v".
+    Found 16-bit register for signal <B>.
+    Found 1-bit register for signal <init>.
+    Found 1-bit register for signal <d_out<15>>.
+    Found 1-bit register for signal <d_out<14>>.
+    Found 1-bit register for signal <d_out<13>>.
+    Found 1-bit register for signal <d_out<12>>.
+    Found 1-bit register for signal <d_out<11>>.
+    Found 1-bit register for signal <d_out<10>>.
+    Found 1-bit register for signal <d_out<9>>.
+    Found 1-bit register for signal <d_out<8>>.
+    Found 1-bit register for signal <d_out<7>>.
+    Found 1-bit register for signal <d_out<6>>.
+    Found 1-bit register for signal <d_out<5>>.
+    Found 1-bit register for signal <d_out<4>>.
+    Found 1-bit register for signal <d_out<3>>.
+    Found 1-bit register for signal <d_out<2>>.
+    Found 1-bit register for signal <d_out<1>>.
+    Found 1-bit register for signal <d_out<0>>.
+    Found 16-bit register for signal <A>.
+    Found 6-bit 7-to-1 multiplexer for signal <_n0084> created at line 14.
+    Summary:
+	inferred  49 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <peripheral_mult> synthesized.
+
+Synthesizing Unit <mult_32>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/mult_32.v".
+    Summary:
+	no macro.
+Unit <mult_32> synthesized.
+
+Synthesizing Unit <rsr>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/rsr.v".
+    Found 16-bit register for signal <s_B>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <rsr> synthesized.
+
+Synthesizing Unit <lsr>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/lsr.v".
+    Found 31-bit register for signal <s_A>.
+    Summary:
+	inferred  31 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <lsr> synthesized.
+
+Synthesizing Unit <comp>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/comp.v".
+    Summary:
+	no macro.
+Unit <comp> synthesized.
+
+Synthesizing Unit <acc>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/acc.v".
+    Found 32-bit register for signal <pp>.
+    Found 32-bit adder for signal <pp[31]_A[31]_add_1_OUT> created at line 15.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <acc> synthesized.
+
+Synthesizing Unit <control_mult>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/multiplier/mult_32/control_mult.v".
+        START = 3'b000
+        CHECK = 3'b001
+        SHIFT = 3'b010
+        ADD = 3'b011
+        END = 3'b100
+    Found 4-bit register for signal <count>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <count[3]_GND_11_o_add_4_OUT> created at line 63.
+    Found 4-bit comparator greater for signal <PWR_12_o_count[3]_LessThan_6_o> created at line 64
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <control_mult> synthesized.
+
+Synthesizing Unit <peripheral_div>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/peripheral_div.v".
+    Found 16-bit register for signal <B>.
+    Found 1-bit register for signal <init>.
+    Found 1-bit register for signal <d_out<15>>.
+    Found 1-bit register for signal <d_out<14>>.
+    Found 1-bit register for signal <d_out<13>>.
+    Found 1-bit register for signal <d_out<12>>.
+    Found 1-bit register for signal <d_out<11>>.
+    Found 1-bit register for signal <d_out<10>>.
+    Found 1-bit register for signal <d_out<9>>.
+    Found 1-bit register for signal <d_out<8>>.
+    Found 1-bit register for signal <d_out<7>>.
+    Found 1-bit register for signal <d_out<6>>.
+    Found 1-bit register for signal <d_out<5>>.
+    Found 1-bit register for signal <d_out<4>>.
+    Found 1-bit register for signal <d_out<3>>.
+    Found 1-bit register for signal <d_out<2>>.
+    Found 1-bit register for signal <d_out<1>>.
+    Found 1-bit register for signal <d_out<0>>.
+    Found 16-bit register for signal <A>.
+    Found 6-bit 7-to-1 multiplexer for signal <_n0077> created at line 14.
+    Summary:
+	inferred  49 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <peripheral_div> synthesized.
+
+Synthesizing Unit <div_16>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/div_16.v".
+    Summary:
+	no macro.
+Unit <div_16> synthesized.
+
+Synthesizing Unit <lsr_div>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/lsr_div.v".
+    Found 16-bit register for signal <DV>.
+    Found 16-bit register for signal <A>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <lsr_div> synthesized.
+
+Synthesizing Unit <subtractor>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/subtractor.v".
+    Found 16-bit register for signal <Result>.
+    Found 32-bit adder for signal <n0023> created at line 19.
+    Found 32-bit adder for signal <n0014> created at line 19.
+    Found 16-bit comparator greater for signal <MSB> created at line 26
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <subtractor> synthesized.
+
+Synthesizing Unit <counter_div>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/counter_div.v".
+    Found 1-bit register for signal <z>.
+    Found 5-bit register for signal <cont>.
+    Found 5-bit subtractor for signal <GND_16_o_GND_16_o_sub_2_OUT<4:0>> created at line 18.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <counter_div> synthesized.
+
+Synthesizing Unit <control_div>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/control_div.v".
+        START = 3'b000
+        SHIFT_DEC = 3'b001
+        CHECK = 3'b010
+        ADD = 3'b011
+        LOAD = 3'b101
+        END1 = 3'b100
+    Found 4-bit register for signal <count>.
+    Found 3-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <count[3]_GND_17_o_add_6_OUT> created at line 69.
+WARNING:Xst:737 - Found 1-bit latch for signal <DV0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator greater for signal <PWR_18_o_count[3]_LessThan_8_o> created at line 70
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <control_div> synthesized.
+
+Synthesizing Unit <final_result>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/divider/div_16/final_result.v".
+    Found 16-bit register for signal <Result>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <final_result> synthesized.
+
+Synthesizing Unit <peripheral_uart>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/peripheral_uart.v".
+        clk_freq = 100000000
+        baud = 115200
+WARNING:Xst:647 - Input <d_in<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <rx_ack>.
+    Found 16-bit register for signal <d_out>.
+    Found 1-bit register for signal <tx_wr>.
+    Found 1-bit 4-to-1 multiplexer for signal <_n0056> created at line 51.
+    Summary:
+	inferred  18 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <peripheral_uart> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/uart/uart.v".
+        freq_hz = 100000000
+        baud = 115200
+    Found 1-bit register for signal <uart_rxd1>.
+    Found 1-bit register for signal <uart_rxd2>.
+    Found 1-bit register for signal <rx_busy>.
+    Found 4-bit register for signal <rx_count16>.
+    Found 4-bit register for signal <rx_bitcount>.
+    Found 1-bit register for signal <rx_avail>.
+    Found 1-bit register for signal <rx_error>.
+    Found 8-bit register for signal <rx_data>.
+    Found 8-bit register for signal <rxd_reg>.
+    Found 1-bit register for signal <tx_busy>.
+    Found 1-bit register for signal <uart_txd>.
+    Found 4-bit register for signal <tx_count16>.
+    Found 8-bit register for signal <txd_reg>.
+    Found 4-bit register for signal <tx_bitcount>.
+    Found 16-bit register for signal <enable16_counter>.
+    Found 4-bit adder for signal <rx_count16[3]_GND_21_o_add_11_OUT> created at line 88.
+    Found 4-bit adder for signal <rx_bitcount[3]_GND_21_o_add_13_OUT> created at line 91.
+    Found 4-bit adder for signal <tx_count16[3]_GND_21_o_add_44_OUT> created at line 137.
+    Found 4-bit adder for signal <tx_bitcount[3]_GND_21_o_add_46_OUT> created at line 140.
+    Found 16-bit subtractor for signal <GND_21_o_GND_21_o_sub_3_OUT<15:0>> created at line 39.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  63 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <uart> synthesized.
+
+Synthesizing Unit <dpRAM_interface>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/dpRAM_interface.v".
+    Summary:
+	no macro.
+Unit <dpRAM_interface> synthesized.
+
+Synthesizing Unit <dualport_RAM>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/dualport_RAM.v".
+    Found 256x16-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 16-bit register for signal <d_out_2>.
+    Found 16-bit register for signal <d_out_1>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <dualport_RAM> synthesized.
+
+Synthesizing Unit <core_peripheric>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/dpRAM/core_peripheric.v".
+    Found 16-bit register for signal <F_2>.
+    Found 16-bit register for signal <F_3>.
+    Found 16-bit register for signal <F_4>.
+    Found 16-bit register for signal <F_5>.
+    Found 16-bit register for signal <F_6>.
+    Found 4-bit register for signal <estado>.
+    Found 16-bit register for signal <F_1>.
+    Found finite state machine <FSM_2> for signal <estado>.
+    -----------------------------------------------------------------------
+    | States             | 14                                             |
+    | Transitions        | 15                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  96 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <core_peripheric> synthesized.
+
+Synthesizing Unit <peripheral_espectro>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/peripheral_espectro.v".
+WARNING:Xst:647 - Input <rd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <d_out> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 32-bit register for signal <fr>.
+    Found 1-bit register for signal <init>.
+    Found 1-bit register for signal <enable>.
+    Found 5-bit 7-to-1 multiplexer for signal <_n0052> created at line 39.
+    Summary:
+	inferred  34 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <peripheral_espectro> synthesized.
+
+Synthesizing Unit <espectro>.
+    Related source file is "/home/chris/Documentos/2015/j1_espectro_uart/hdl/espectro/espectro.v".
+WARNING:Xst:647 - Input <init> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'salida', unconnected in block 'espectro', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <salida>, simulation mismatch.
+    Found 49x1-bit single-port Read Only RAM <Mram_salida> for signal <salida>.
+    Found 1-bit register for signal <sound>.
+    Found 20-bit register for signal <counter1>.
+    Found 1-bit register for signal <clk>.
+    Found 6-bit register for signal <counter2>.
+    Found 20-bit adder for signal <counter1[19]_GND_26_o_add_12_OUT> created at line 69.
+    Found 6-bit subtractor for signal <GND_26_o_GND_26_o_sub_3_OUT<5:0>> created at line 34.
+    Found 32-bit comparator equal for signal <GND_26_o_fr[31]_equal_12_o> created at line 62
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <espectro> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 256x16-bit dual-port RAM                              : 1
+ 32x16-bit dual-port RAM                               : 2
+ 49x1-bit single-port Read Only RAM                    : 1
+ 8192x16-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 18
+ 14-bit adder                                          : 1
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 1
+ 20-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 4-bit adder                                           : 6
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+ 5-bit subtractor                                      : 1
+ 6-bit subtractor                                      : 1
+# Registers                                            : 58
+ 1-bit register                                        : 16
+ 13-bit register                                       : 1
+ 16-bit register                                       : 24
+ 20-bit register                                       : 1
+ 31-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 6
+ 5-bit register                                        : 3
+ 6-bit register                                        : 1
+ 8-bit register                                        : 3
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 3
+ 32-bit comparator equal                               : 1
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 100
+ 1-bit 2-to-1 multiplexer                              : 23
+ 1-bit 4-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 44
+ 16-bit 3-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 5
+ 5-bit 2-to-1 multiplexer                              : 10
+ 5-bit 7-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 3
+ 6-bit 7-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <acc>.
+The following registers are absorbed into accumulator <pp>: 1 register on signal <pp>.
+Unit <acc> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dualport_RAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ram> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr_1>        |          |
+    |     diA            | connected to signal <d_in_1>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     clkB           | connected to signal <clk>           | fall     |
+    |     weB            | connected to internal node          | high     |
+    |     addrB          | connected to signal <addr_2>        |          |
+    |     diB            | connected to signal <d_in_2>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <dualport_RAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <espectro>.
+The following registers are absorbed into counter <counter1>: 1 register on signal <counter1>.
+The following registers are absorbed into counter <counter2>: 1 register on signal <counter2>.
+INFO:Xst:3226 - The RAM <Mram_salida> will be implemented as a BLOCK RAM, absorbing the following register(s): <sound>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 49-word x 1-bit                     |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <counter2>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <sound>         |          |
+    |     dorstA         | connected to signal <enable>        | low      |
+    | reset value        | 0                                              |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+Unit <espectro> synthesized (advanced).
+
+Synthesizing (advanced) Unit <j1>.
+The following registers are absorbed into counter <dsp>: 1 register on signal <dsp>.
+INFO:Xst:3226 - The RAM <Mram_rstack> will be implemented as a BLOCK RAM, absorbing the following register(s): <rsp>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_rstkW>        | high     |
+    |     addrA          | connected to signal <_rsp>          |          |
+    |     diA            | connected to signal <_rstkD>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <ram0/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <ram0/dat_a_out> <ram0/dat_b>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <st0<13:1>>     |          |
+    |     diA            | connected to signal <io_dout>       |          |
+    |     doA            | connected to signal <ramrd>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <sys_clk_i>     | rise     |
+    |     addrB          | connected to signal <_pc>           |          |
+    |     doB            | connected to signal <insn>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | area                                |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dstack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     clkA           | connected to signal <sys_clk_i>     | rise     |
+    |     weA            | connected to signal <_dstkW>        | high     |
+    |     addrA          | connected to signal <_dsp>          |          |
+    |     diA            | connected to signal <st0>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 16-bit                    |          |
+    |     addrB          | connected to signal <dsp>           |          |
+    |     doB            | connected to signal <io_dout>       |          |
+    -----------------------------------------------------------------------
+Unit <j1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart>.
+The following registers are absorbed into counter <rx_count16>: 1 register on signal <rx_count16>.
+The following registers are absorbed into counter <rx_bitcount>: 1 register on signal <rx_bitcount>.
+The following registers are absorbed into counter <tx_count16>: 1 register on signal <tx_count16>.
+Unit <uart> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 256x16-bit dual-port distributed RAM                  : 1
+ 32x16-bit dual-port distributed RAM                   : 1
+ 32x16-bit single-port block RAM                       : 1
+ 49x1-bit single-port block Read Only RAM              : 1
+ 8192x16-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 11
+ 14-bit adder                                          : 1
+ 16-bit adder carry in                                 : 1
+ 16-bit addsub                                         : 1
+ 16-bit subtractor                                     : 1
+ 4-bit adder                                           : 3
+ 5-bit adder                                           : 2
+ 5-bit addsub                                          : 1
+ 5-bit subtractor                                      : 1
+# Counters                                             : 6
+ 20-bit up counter                                     : 1
+ 4-bit up counter                                      : 3
+ 5-bit up counter                                      : 1
+ 6-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 489
+ Flip-Flops                                            : 489
+# Comparators                                          : 7
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 3
+ 32-bit comparator equal                               : 1
+ 4-bit comparator greater                              : 2
+# Multiplexers                                         : 173
+ 1-bit 2-to-1 multiplexer                              : 105
+ 1-bit 4-to-1 multiplexer                              : 1
+ 13-bit 2-to-1 multiplexer                             : 2
+ 16-bit 2-to-1 multiplexer                             : 40
+ 16-bit 3-to-1 multiplexer                             : 1
+ 31-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+ 5-bit 2-to-1 multiplexer                              : 9
+ 5-bit 7-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 6-bit 7-to-1 multiplexer                              : 2
+ 8-bit 2-to-1 multiplexer                              : 5
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 3
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <per_m/mt_32/control0/FSM_0> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 010   | 010
+ 100   | 100
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <per_d/d_16/ctl_dv/FSM_1> on signal <state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <dpRm/c_p/FSM_2> on signal <estado[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+-------------------
+WARNING:Xst:1710 - FF/Latch <d_out_8> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_9> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_10> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_11> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_12> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_13> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_14> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <d_out_15> (without init value) has a constant value of 0 in block <peripheral_uart>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <j1soc> ...
+
+Optimizing unit <peripheral_uart> ...
+
+Optimizing unit <uart> ...
+
+Optimizing unit <j1> ...
+
+Optimizing unit <peripheral_mult> ...
+
+Optimizing unit <lsr> ...
+
+Optimizing unit <rsr> ...
+
+Optimizing unit <control_mult> ...
+
+Optimizing unit <peripheral_div> ...
+
+Optimizing unit <lsr_div> ...
+
+Optimizing unit <subtractor> ...
+
+Optimizing unit <counter_div> ...
+
+Optimizing unit <control_div> ...
+
+Optimizing unit <final_result> ...
+
+Optimizing unit <dualport_RAM> ...
+
+Optimizing unit <core_peripheric> ...
+
+Optimizing unit <peripheral_espectro> ...
+
+Optimizing unit <espectro> ...
+WARNING:Xst:2677 - Node <peripheral_espectro/init> of sequential type is unconnected in block <j1soc>.
+WARNING:Xst:1710 - FF/Latch <per_u/uart0/enable16_counter_15> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_14> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_13> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_12> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_11> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_10> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_9> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_8> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_7> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <per_u/uart0/enable16_counter_6> (without init value) has a constant value of 0 in block <j1soc>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block j1soc, actual ratio is 15.
+FlipFlop per_u/uart0/uart_txd has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4652
+ Flip-Flops                                            : 4652
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : project.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7468
+#      GND                         : 1
+#      INV                         : 12
+#      LUT1                        : 14
+#      LUT2                        : 64
+#      LUT3                        : 133
+#      LUT4                        : 163
+#      LUT5                        : 507
+#      LUT6                        : 5452
+#      MUXCY                       : 142
+#      MUXF7                       : 578
+#      MUXF8                       : 288
+#      VCC                         : 1
+#      XORCY                       : 113
+# FlipFlops/Latches                : 4653
+#      FD                          : 20
+#      FD_1                        : 73
+#      FDE                         : 4224
+#      FDE_1                       : 159
+#      FDR                         : 48
+#      FDR_1                       : 10
+#      FDRE                        : 84
+#      FDRE_1                      : 32
+#      FDS                         : 2
+#      LD                          : 1
+# RAMS                             : 12
+#      RAM32M                      : 2
+#      RAM32X1D                    : 4
+#      RAMB18E1                    : 2
+#      RAMB36E1                    : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            4651  out of  126800     3%  
+ Number of Slice LUTs:                 6361  out of  63400    10%  
+    Number used as Logic:              6345  out of  63400    10%  
+    Number used as Memory:               16  out of  19000     0%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   6472
+   Number with an unused Flip Flop:    1821  out of   6472    28%  
+   Number with an unused LUT:           111  out of   6472     1%  
+   Number of fully used LUT-FF pairs:  4540  out of   6472    70%  
+   Number of unique control sets:       288
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    210     2%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of    135     3%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------------------------+----------------------------------------------+-------+
+Clock Signal                                                                      | Clock buffer(FF name)                        | Load  |
+----------------------------------------------------------------------------------+----------------------------------------------+-------+
+sys_clk_i                                                                         | BUFGP                                        | 4657  |
+per_d/d_16/ctl_dv/state[2]_PWR_19_o_Mux_22_o(per_d/d_16/ctl_dv/state__n0067<5>1:O)| NONE(*)(per_d/d_16/ctl_dv/DV0)               | 1     |
+peripheral_espectro/espectro/clk                                                  | NONE(peripheral_espectro/espectro/counter2_5)| 7     |
+----------------------------------------------------------------------------------+----------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                               | Load  |
+-----------------------------------+-----------------------------------------------+-------+
+cpu0/_rstkW(cpu0/Mmux__rstkW11:O)  | NONE(cpu0/Mram_rstack)                        | 2     |
+dpRm/dlptRAM/BUS_0002_34(XST_GND:G)| NONE(peripheral_espectro/espectro/Mram_salida)| 2     |
+-----------------------------------+-----------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 11.871ns (Maximum Frequency: 84.242MHz)
+   Minimum input arrival time before clock: 4.208ns
+   Maximum output required time after clock: 2.853ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clk_i'
+  Clock period: 11.871ns (frequency: 84.242MHz)
+  Total number of paths / destination ports: 417487 / 9307
+-------------------------------------------------------------------------
+Delay:               5.935ns (Levels of Logic = 22)
+  Source:            dpRm/dlptRAM/d_out_1_1 (FF)
+  Destination:       cpu0/st0_15 (FF)
+  Source Clock:      sys_clk_i falling
+  Destination Clock: sys_clk_i rising
+
+  Data Path: dpRm/dlptRAM/d_out_1_1 to cpu0/st0_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            1   0.484   0.536  dpRm/dlptRAM/d_out_1_1 (dpRm/dlptRAM/d_out_1_1)
+     LUT5:I3->O            1   0.124   0.536  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A326 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A325)
+     LUT6:I4->O            1   0.124   0.421  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A327 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A326)
+     LUT6:I5->O            1   0.124   0.421  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A328 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A327)
+     LUT6:I5->O            1   0.124   0.421  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A329 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A328)
+     LUT6:I5->O            1   0.124   0.421  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_A3210 (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_A<1>)
+     LUT6:I5->O            1   0.124   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_lut<1> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_lut<1>)
+     MUXCY:S->O            1   0.472   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<1> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<2> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<3> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<4> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<5> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<6> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<7> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<8> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<9> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<10> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<11> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<12> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<13> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<13>)
+     MUXCY:CI->O           0   0.029   0.000  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<14> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_cy<14>)
+     XORCY:CI->O           3   0.510   0.435  cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_rs_xor<15> (cpu0/Mmux_st0sel[3]_st1[15]_wide_mux_24_OUT15_split<15>)
+     LUT2:I1->O            1   0.124   0.000  cpu0/Mmux__st071 (cpu0/_st0<15>)
+     FDR:D                     0.030          cpu0/st0_15
+    ----------------------------------------
+    Total                      5.935ns (2.744ns logic, 3.191ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'peripheral_espectro/espectro/clk'
+  Clock period: 1.611ns (frequency: 620.732MHz)
+  Total number of paths / destination ports: 41 / 12
+-------------------------------------------------------------------------
+Delay:               1.611ns (Levels of Logic = 1)
+  Source:            peripheral_espectro/espectro/counter2_3 (FF)
+  Destination:       peripheral_espectro/espectro/counter2_3 (FF)
+  Source Clock:      peripheral_espectro/espectro/clk rising
+  Destination Clock: peripheral_espectro/espectro/clk rising
+
+  Data Path: peripheral_espectro/espectro/counter2_3 to peripheral_espectro/espectro/counter2_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.478   0.979  peripheral_espectro/espectro/counter2_3 (peripheral_espectro/espectro/counter2_3)
+     LUT6:I0->O            1   0.124   0.000  peripheral_espectro/espectro/Mcount_counter2_xor<3>11 (peripheral_espectro/espectro/Mcount_counter23)
+     FD:D                      0.030          peripheral_espectro/espectro/counter2_3
+    ----------------------------------------
+    Total                      1.611ns (0.632ns logic, 0.979ns route)
+                                       (39.2% logic, 60.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'sys_clk_i'
+  Total number of paths / destination ports: 235 / 185
+-------------------------------------------------------------------------
+Offset:              4.208ns (Levels of Logic = 4)
+  Source:            sys_rst_i (PAD)
+  Destination:       cpu0/Mram_rstack (RAM)
+  Destination Clock: sys_clk_i rising
+
+  Data Path: sys_rst_i to cpu0/Mram_rstack
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           133   0.001   0.891  sys_rst_i_IBUF (sys_rst_i_IBUF)
+     LUT6:I3->O           13   0.124   0.856  cpu0/mux10131 (cpu0/mux1013)
+     LUT5:I1->O            6   0.124   0.952  cpu0/mux13 (cpu0/_pc<0>)
+     LUT5:I0->O            1   0.124   0.399  cpu0/Mmux__rstkD17 (cpu0/_rstkD<0>)
+     RAMB18E1:DIADI0           0.737          cpu0/Mram_rstack
+    ----------------------------------------
+    Total                      4.208ns (1.110ns logic, 3.098ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sys_clk_i'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            per_u/uart0/uart_txd_1 (FF)
+  Destination:       uart_tx (PAD)
+  Source Clock:      sys_clk_i rising
+
+  Data Path: per_u/uart0/uart_txd_1 to uart_tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.478   0.399  per_u/uart0/uart_txd_1 (per_u/uart0/uart_txd_1)
+     OBUF:I->O                 0.000          uart_tx_OBUF (uart_tx)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'peripheral_espectro/espectro/clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.853ns (Levels of Logic = 1)
+  Source:            peripheral_espectro/espectro/Mram_salida (RAM)
+  Destination:       sound (PAD)
+  Source Clock:      peripheral_espectro/espectro/clk rising
+
+  Data Path: peripheral_espectro/espectro/Mram_salida to sound
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO0    1   2.454   0.399  peripheral_espectro/espectro/Mram_salida (sound_OBUF)
+     OBUF:I->O                 0.000          sound_OBUF (sound)
+    ----------------------------------------
+    Total                      2.853ns (2.454ns logic, 0.399ns route)
+                                       (86.0% logic, 14.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock per_d/d_16/ctl_dv/state[2]_PWR_19_o_Mux_22_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clk_i      |         |         |    1.304|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock peripheral_espectro/espectro/clk
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+peripheral_espectro/espectro/clk|    1.611|         |         |         |
+sys_clk_i                       |         |    1.927|         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clk_i
+--------------------------------------------+---------+---------+---------+---------+
+                                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------+---------+---------+---------+---------+
+per_d/d_16/ctl_dv/state[2]_PWR_19_o_Mux_22_o|         |         |    1.261|         |
+sys_clk_i                                   |    9.808|    5.935|    5.011|         |
+--------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 56.55 secs
+ 
+--> 
+
+
+Total memory usage is 512552 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   50 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

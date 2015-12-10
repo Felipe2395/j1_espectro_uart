@@ -1,0 +1,573 @@
+$date
+	Thu Nov 19 17:47:28 2015
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module peripheral_espectro_TB $end
+$scope module uut $end
+$var wire 4 ! addr [3:0] $end
+$var wire 1 " clk $end
+$var wire 1 # cs $end
+$var wire 16 $ d_in [15:0] $end
+$var wire 1 % rd $end
+$var wire 1 & rst $end
+$var wire 1 ' sound $end
+$var wire 1 ( wr $end
+$var reg 16 ) d_out [15:0] $end
+$var reg 1 * enable $end
+$var reg 32 + fr [31:0] $end
+$var reg 3 , s [2:0] $end
+$scope module espectro $end
+$var wire 1 " clk50 $end
+$var wire 1 - enable $end
+$var wire 32 . fr [31:0] $end
+$var wire 1 & rst $end
+$var reg 1 / clk $end
+$var reg 20 0 counter1 [19:0] $end
+$var reg 6 1 counter2 [5:0] $end
+$var reg 49 2 salida [48:0] $end
+$var reg 1 3 sound $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x3
+b101101111111111111101101010010000000000000100010 2
+b110001 1
+b0 0
+0/
+bx .
+1-
+b1 ,
+bx +
+1*
+bx )
+1(
+x'
+x&
+0%
+b100011 $
+1#
+0"
+b0 !
+$end
+#10
+1"
+#20
+bx +
+0"
+#30
+1"
+#40
+bx +
+0"
+#50
+1"
+#60
+bx +
+0"
+#70
+1"
+#80
+bx +
+0"
+#90
+1"
+#100
+bx +
+0"
+#110
+1"
+#120
+bx +
+0"
+#130
+1"
+#140
+bx +
+0"
+#150
+1"
+#160
+bx +
+0"
+#170
+b10 ,
+b10 !
+b1010 $
+1"
+#180
+b1010xxxxxxxxxxxxxxxx +
+b1010xxxxxxxxxxxxxxxx .
+0"
+#190
+1"
+#200
+b1010xxxxxxxxxxxxxxxx +
+0"
+#210
+1"
+#220
+b1010xxxxxxxxxxxxxxxx +
+0"
+#230
+1"
+#240
+b1010xxxxxxxxxxxxxxxx +
+0"
+#250
+b1 ,
+b0 !
+b100 $
+1"
+#260
+b1010xxxxxxxxxxxxxxxx +
+0*
+0-
+0"
+#270
+1"
+#280
+b1010xxxxxxxxxxxxxxxx +
+0"
+#290
+1"
+#300
+b1010xxxxxxxxxxxxxxxx +
+0"
+#310
+1"
+#320
+b1010xxxxxxxxxxxxxxxx +
+0"
+#330
+b1 $
+1"
+#340
+b1010xxxxxxxxxxxxxxxx +
+1*
+1-
+0"
+#350
+1"
+#360
+b1010xxxxxxxxxxxxxxxx +
+0"
+#370
+1"
+#380
+b1010xxxxxxxxxxxxxxxx +
+0"
+#390
+1"
+#400
+b1010xxxxxxxxxxxxxxxx +
+0"
+#410
+1"
+#420
+b1010xxxxxxxxxxxxxxxx +
+0"
+#430
+1"
+#440
+b1010xxxxxxxxxxxxxxxx +
+0"
+#450
+1"
+#460
+b1010xxxxxxxxxxxxxxxx +
+0"
+#470
+1"
+#480
+b1010xxxxxxxxxxxxxxxx +
+0"
+#490
+1"
+#500
+b1010xxxxxxxxxxxxxxxx +
+0"
+#510
+1"
+#520
+b1010xxxxxxxxxxxxxxxx +
+0"
+#530
+1"
+#540
+b1010xxxxxxxxxxxxxxxx +
+0"
+#550
+1"
+#560
+b1010xxxxxxxxxxxxxxxx +
+0"
+#570
+1"
+#580
+b1010xxxxxxxxxxxxxxxx +
+0"
+#590
+1"
+#600
+b1010xxxxxxxxxxxxxxxx +
+0"
+#610
+1"
+#620
+b1010xxxxxxxxxxxxxxxx +
+0"
+#630
+1"
+#640
+b1010xxxxxxxxxxxxxxxx +
+0"
+#650
+1"
+#660
+b1010xxxxxxxxxxxxxxxx +
+0"
+#670
+1"
+#680
+b1010xxxxxxxxxxxxxxxx +
+0"
+#690
+1"
+#700
+b1010xxxxxxxxxxxxxxxx +
+0"
+#710
+1"
+#720
+b1010xxxxxxxxxxxxxxxx +
+0"
+#730
+1"
+#740
+b1010xxxxxxxxxxxxxxxx +
+0"
+#750
+1"
+#760
+b1010xxxxxxxxxxxxxxxx +
+0"
+#770
+1"
+#780
+b1010xxxxxxxxxxxxxxxx +
+0"
+#790
+1"
+#800
+b1010xxxxxxxxxxxxxxxx +
+0"
+#810
+1"
+#820
+b1010xxxxxxxxxxxxxxxx +
+0"
+#830
+1"
+#840
+b1010xxxxxxxxxxxxxxxx +
+0"
+#850
+1"
+#860
+b1010xxxxxxxxxxxxxxxx +
+0"
+#870
+1"
+#880
+b1010xxxxxxxxxxxxxxxx +
+0"
+#890
+1"
+#900
+b1010xxxxxxxxxxxxxxxx +
+0"
+#910
+1"
+#920
+b1010xxxxxxxxxxxxxxxx +
+0"
+#930
+1"
+#940
+b1010xxxxxxxxxxxxxxxx +
+0"
+#950
+1"
+#960
+b1010xxxxxxxxxxxxxxxx +
+0"
+#970
+1"
+#980
+b1010xxxxxxxxxxxxxxxx +
+0"
+#990
+1"
+#1000
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1010
+1"
+#1020
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1030
+1"
+#1040
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1050
+1"
+#1060
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1070
+1"
+#1080
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1090
+1"
+#1100
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1110
+1"
+#1120
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1130
+1"
+#1140
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1150
+1"
+#1160
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1170
+1"
+#1180
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1190
+1"
+#1200
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1210
+1"
+#1220
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1230
+1"
+#1240
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1250
+1"
+#1260
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1270
+1"
+#1280
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1290
+1"
+#1300
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1310
+1"
+#1320
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1330
+1"
+#1340
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1350
+1"
+#1360
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1370
+1"
+#1380
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1390
+1"
+#1400
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1410
+1"
+#1420
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1430
+1"
+#1440
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1450
+1"
+#1460
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1470
+1"
+#1480
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1490
+1"
+#1500
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1510
+1"
+#1520
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1530
+1"
+#1540
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1550
+1"
+#1560
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1570
+1"
+#1580
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1590
+1"
+#1600
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1610
+1"
+#1620
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1630
+1"
+#1640
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1650
+1"
+#1660
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1670
+1"
+#1680
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1690
+1"
+#1700
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1710
+1"
+#1720
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1730
+1"
+#1740
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1750
+1"
+#1760
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1770
+1"
+#1780
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1790
+1"
+#1800
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1810
+1"
+#1820
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1830
+1"
+#1840
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1850
+1"
+#1860
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1870
+1"
+#1880
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1890
+1"
+#1900
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1910
+1"
+#1920
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1930
+1"
+#1940
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1950
+1"
+#1960
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1970
+1"
+#1980
+b1010xxxxxxxxxxxxxxxx +
+0"
+#1990
+1"
+#2000
+b1010xxxxxxxxxxxxxxxx +
+0"
+#2010
+1"
